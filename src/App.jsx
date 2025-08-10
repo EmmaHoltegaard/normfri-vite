@@ -1,15 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-// import './App.css'
+import { GlobalStyles } from "./styles/GlobalStyles";
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+
+// Components:
+import { PageWrapper } from './styles/Common';
+import { Header } from './components/header/Header';
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-<p>hello world</p>
-    </>
+    <PageWrapper>
+      <GlobalStyles />
+      <BrowserRouter>
+        <Header/>
+      <Routes>
+        {/* Routes goes here */}
+      </Routes>
+      {/* Footer goes here */}
+      </BrowserRouter>
+    </PageWrapper>
   )
 }
 
