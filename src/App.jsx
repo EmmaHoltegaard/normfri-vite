@@ -16,7 +16,6 @@ import { Forside } from "./components/forside/Forside";
 import { PraktiskInfo } from "./components/praktiskInfo/PraktiskInfo";
 
 
-
 function App() {
 
   return (

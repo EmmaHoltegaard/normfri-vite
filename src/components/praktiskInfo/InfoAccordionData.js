@@ -2,18 +2,18 @@ export const InfoAccordionData = [
     {
       id: 1,
       topic: 'Priser og vilkår',
-      p1: 'Individuel samtaleterapi » 50 min » 650 kr. ',
-      p2: 'Par/gruppeterapi » 60 min » 800 kr.',
+      p1: 'Individuel samtaleterapi » 50 min » 650 kr.',
+      p2: 'Par/gruppeterapi » 60 min » 950 kr.',
       p3: 'Gruppeforløb » 8 mødegange á 90 min » 1600 kr. i alt.',
-      p4: 'Betaling foregår kontant eller på mobilepay efter hver session. ',
+      p4: 'Betaling foregår ved online booking eller kontant efter hver session.',
       p5: 'Afbud er minimum 24 timer før og ellers betales fuld pris.'
     },
     {
       id: 2,
       topic: 'Lokation og tilgængelighed',
-      p1: 'Min praksis befinder sig i Aalborg midtby, hvor jeg både har klinik i Ågades Passage og er "in-house" terapeut på Buens Bogcafé udvalgte dage i ugen.',
-      p2: 'Klinikken i Ågades Passage er ikke nemt tilgængelig for gangbesværede, men har du behov for rampe el.lign. er du til gengæld velkommen i det private lokale bagerst i Buens Bogcafé.',
-      p3: 'Jeg stræber efter at imødekomme forskellige behov, så ræk endelig ud hvis terapien kan gøres mere tilgængelig for dig, og så finder vi en løsning sammen. '
+      p1: 'Min praksis befinder sig i Aalborg midtby – i Fremtidens Hus, Vesterbro 18, 9000 Aalborg.',
+      p2: 'Klinikken er åben hver mandag, tirsdag og fredag, samt weekend efter aftale.',
+      p3: 'Klinikken er desværre ikke nemt tilgængelig for gangbesværede, men jeg stræber generelt efter at imødekomme forskellige behov, så ræk endelig ud hvis terapien kan gøres mere tilgængelig for dig. Sammen finder vi en løsning.'
     },
     {
       id: 3,

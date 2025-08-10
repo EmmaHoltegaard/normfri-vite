@@ -7,8 +7,7 @@ export const Footer = () => {
       <FooterWrapper>
         <InnerWrapper>
           <LeftInnerWrapper>
-            <FooterText><BoldSpan>Normfri terapi v. Rebekka Pi</BoldSpan></FooterText>
-            <FooterText>normfriterapi@protonmail.com</FooterText>
+            <FooterText>Normfri terapi v. Rebekka Pi</FooterText>
           </LeftInnerWrapper>
           <MiddleInnerWrapper>
             <Link href="https://www.linkedin.com/in/rebekkapi/" target="_blank" rel="noopener noreferrer">
@@ -16,7 +15,7 @@ export const Footer = () => {
             </Link>
           </MiddleInnerWrapper>
           <RightInnerWrapper>
-            <FooterText>Hjemmeside af <Link href="https://www.linkedin.com/in/emmaholtegaard/" target="_blank" rel="noopener noreferrer">Emma Holtegaard</Link></FooterText>
+          <FooterText>normfriterapi@protonmail.com</FooterText>
           </RightInnerWrapper>
         </InnerWrapper>
       </FooterWrapper>
