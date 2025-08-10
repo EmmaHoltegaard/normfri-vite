@@ -11,6 +11,10 @@ import { Grupper } from "./components/Grupper";
 import { NotFound } from "./components/NotFound";
 import { Ydelser } from "./components/Ydelser";
 import { English } from "./components/English";
+import { Kontakt } from "./components/contact/Kontakt";
+import { Forside } from "./components/forside/Forside";
+import { PraktiskInfo } from "./components/praktiskInfo/PraktiskInfo";
+
 
 
 function App() {
@@ -21,7 +25,10 @@ function App() {
       <ScrollToTop/>
       <Header/>
       <Routes>
+        <Route path="/" element={<Forside />} />
+        <Route path="/kontakt" element={<Kontakt/>} /> 
         <Route path="/minTilgang" element={<MinTilgang />} />
+        <Route path="/praktiskInfo" element={<PraktiskInfo/>} />
         <Route path="/ydelser" element={<Ydelser />} />
         <Route path="/english" element={<English />} />
         <Route path="/ydelser/grupper" element={<Grupper />} />

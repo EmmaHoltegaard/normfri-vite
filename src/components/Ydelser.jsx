@@ -85,4 +85,5 @@ export const Ydelser = () => {
   
   const StyledLink = styled(Link)`
     color: var(--purple);
+    text-decoration: underline;
   `
