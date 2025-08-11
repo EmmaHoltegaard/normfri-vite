@@ -5,35 +5,35 @@ import { UddannelseData } from "./UddannelseData"
 import { KurserData } from "./KurserData"
 
 export const Uddannelse = () => {
-    return (
-      <SectionWrapper>
-        <Image src={lineart2} alt="lineart" />
-        <ContentWrapper>
-          <ExperienceWrapper>
-            <Header1>Uddannelse</Header1>
-            {UddannelseData.map((item) => (
-              <Education key={item.id}>
-                <BoldSpan>{item.title} </BoldSpan>
-                {item.year}, {item.source}
-              </Education>
-            ))}
-          </ExperienceWrapper>
-          <ExperienceWrapper>
-            <Header1>Kurser</Header1>
-            {KurserData.map((item) => (
-              <Experience key={item.id}>
-                <BoldSpan>{item.title}</BoldSpan> » {item.source}
-              </Experience>
-            ))}
-          </ExperienceWrapper>
-        </ContentWrapper>
-      </SectionWrapper>
-    )
-  }
-  
-  // Styled Components
-  
-  const SectionWrapper = styled.div`
+  return (
+    <SectionWrapper>
+      <Image src={lineart2} alt="lineart" />
+      <ContentWrapper>
+        <ExperienceWrapper>
+          <Header1>Uddannelse</Header1>
+          {UddannelseData.map((item) => (
+            <Education key={item.id}>
+              <BoldSpan>{item.title} </BoldSpan>
+              {item.year}, {item.source}
+            </Education>
+          ))}
+        </ExperienceWrapper>
+        <ExperienceWrapper>
+          <Header1>Kurser</Header1>
+          {KurserData.map((item) => (
+            <Experience key={item.id}>
+              <BoldSpan>{item.title}</BoldSpan> » {item.source}
+            </Experience>
+          ))}
+        </ExperienceWrapper>
+      </ContentWrapper>
+    </SectionWrapper>
+  )
+}
+
+// Styled Components
+
+const SectionWrapper = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -41,8 +41,8 @@ export const Uddannelse = () => {
     background-color: var(--pink);
     padding-bottom: 30px;
   `
-  
-  const Image = styled.img`
+
+const Image = styled.img`
     height: 491px;
     width: 206px;
     margin-top: 0;
@@ -50,8 +50,8 @@ export const Uddannelse = () => {
       display:none;
     }
   `
-  
-  const ContentWrapper = styled.div`
+
+const ContentWrapper = styled.div`
     margin-top: 100px;
     margin-right: 40px;
     min-width: 320px;
@@ -60,21 +60,32 @@ export const Uddannelse = () => {
       width: 320px;
       margin: 100px auto 60px auto;
     }
+    @media (max-width: 340px) {
+      width: 310px;
+      //border: 2px dotted red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   `
-  
-  const ExperienceWrapper = styled.div`
+
+const ExperienceWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 30px;
+    @media (max-width: 340px) {
+    width: 95%;
+    //border: 2px dotted green;
+  }
   `
-  
-  const Education = styled(TextPurple)`
+
+const Education = styled(TextPurple)`
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
   `
-  
-  const Experience = styled(TextPurple)`
+
+const Experience = styled(TextPurple)`
     margin-bottom: 10px;
   `

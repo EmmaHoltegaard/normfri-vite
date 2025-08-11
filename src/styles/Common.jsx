@@ -6,6 +6,7 @@ export const PageWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  width: 100vw;
 `
 
 export const SectionWrapper = styled.section`
@@ -32,6 +33,7 @@ export const Header1 = styled.h2`
   text-align: center;
   margin-bottom: 1rem;
   line-height: 3rem;
+  //border: red dotted 2px;
 `
 
 export const Header2 = styled.h3`
@@ -47,7 +49,11 @@ export const TextPurple = styled.p`
   line-height: 1.875rem;
   color: var(--purple);
   margin: 0 3px;
-
+  //border: red dotted 2px;
+  @media (max-width: 340px) {
+    font-size: 1rem;
+    width: 96%;
+  }
 `
 
 export const TextWhite = styled(TextPurple)`

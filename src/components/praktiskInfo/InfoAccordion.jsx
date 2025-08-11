@@ -7,85 +7,85 @@ import { useUI } from "../../state/ui-context";
 
 
 export const InfoAccordion = () => {
-    const { activeTopicId, toggleInfo } = useUI();
+  const { activeTopicId, toggleInfo } = useUI();
 
-    const onTopicClick = (itemId) => {
-      if (itemId === activeTopicId) {
-        toggleInfo(null);
-      } else {
-        toggleInfo(itemId);
-      }
-    };
-
-
-    return (
-      <AccordionWrapper>
-        {InfoAccordionData.map((item) => {
-          if (item.id === 4) {
-            return (
-              <AccordionSectionWrapper key={item.id}>
-                <TopicWrapper
-                  isActive={item.id === activeTopicId}
-                  onClick={() => onTopicClick(item.id)}>
-                  <Header2>{item.topic}</Header2>
-                  <ActiveIcon
-                    src={triangle}
-                    alt="triangle"
-                    isActive={item.id === activeTopicId} />
-                </TopicWrapper>
-                {item.id === activeTopicId && (
-                  <TextWrapper>
-                    <Text>
-                      {item.p1} <StyledLink to="/kontakt">{item.p2}</StyledLink> {item.p3}
-                    </Text>
-                    <Text>{item.p4}</Text>
-                  </TextWrapper>
-                )}
-              </AccordionSectionWrapper>
-            );
-          } else {
-            return (
-              <AccordionSectionWrapper key={item.id}>
-                <TopicWrapper
-                  isActive={item.id === activeTopicId}
-                  onClick={() => onTopicClick(item.id)}>
-                  <Header2>{item.topic}</Header2>
-                  <ActiveIcon
-                    src={triangle}
-                    alt="triangle"
-                    $isActive={item.id === activeTopicId} />
-                </TopicWrapper>
-                {item.id === activeTopicId && (
-                  <TextWrapper>
-                    <Text>{item.p1}</Text>
-                    <Text>{item.p2}</Text>
-                    <Text>{item.p3}</Text>
-                    <Text>{item.p4}</Text>
-                    <Text>{item.p5}</Text>
-                  </TextWrapper>
-                )}
-              </AccordionSectionWrapper>
-            );
-          }
-        })}
-      </AccordionWrapper>
-    );
+  const onTopicClick = (itemId) => {
+    if (itemId === activeTopicId) {
+      toggleInfo(null);
+    } else {
+      toggleInfo(itemId);
+    }
   };
-  
-  // Styled Components
-  
-  const AccordionWrapper = styled.div`
+
+
+  return (
+    <AccordionWrapper>
+      {InfoAccordionData.map((item) => {
+        if (item.id === 4) {
+          return (
+            <AccordionSectionWrapper key={item.id}>
+              <TopicWrapper
+                $isActive={item.id === activeTopicId}
+                onClick={() => onTopicClick(item.id)}>
+                <Header2>{item.topic}</Header2>
+                <ActiveIcon
+                  src={triangle}
+                  alt="triangle"
+                  $isActive={item.id === activeTopicId} />
+              </TopicWrapper>
+              {item.id === activeTopicId && (
+                <TextWrapper>
+                  <Text>
+                    {item.p1} <StyledLink to="/kontakt">{item.p2}</StyledLink> {item.p3}
+                  </Text>
+                  <Text>{item.p4}</Text>
+                </TextWrapper>
+              )}
+            </AccordionSectionWrapper>
+          );
+        } else {
+          return (
+            <AccordionSectionWrapper key={item.id}>
+              <TopicWrapper
+                $isActive={item.id === activeTopicId}
+                onClick={() => onTopicClick(item.id)}>
+                <Header2>{item.topic}</Header2>
+                <ActiveIcon
+                  src={triangle}
+                  alt="triangle"
+                  $isActive={item.id === activeTopicId} />
+              </TopicWrapper>
+              {item.id === activeTopicId && (
+                <TextWrapper>
+                  <Text>{item.p1}</Text>
+                  <Text>{item.p2}</Text>
+                  <Text>{item.p3}</Text>
+                  <Text>{item.p4}</Text>
+                  <Text>{item.p5}</Text>
+                </TextWrapper>
+              )}
+            </AccordionSectionWrapper>
+          );
+        }
+      })}
+    </AccordionWrapper>
+  );
+};
+
+// Styled Components
+
+const AccordionWrapper = styled.div`
     width: 90%;
     min-width: 320px;
     max-width: 1050px;
     margin: 40px auto 60px auto;
   `
-  
-  const AccordionSectionWrapper = styled.div`
+
+const AccordionSectionWrapper = styled.div`
     border-bottom: pink solid 1px;
   `
-  
-  const TopicWrapper = styled.div`
+
+const TopicWrapper = styled.div`
     width: 100%;
     padding: 15px 50px 15px 50px;
     background-color: var(--transparentWhite);
@@ -97,8 +97,8 @@ export const InfoAccordion = () => {
       padding: 15px 25px 15px 25px;
     }
   `
-  
-  const TextWrapper = styled.div`
+
+const TextWrapper = styled.div`
     width: 100%;
     padding: 20px 30px 20px 30px;
     background-color: var(--purple);
@@ -109,8 +109,8 @@ export const InfoAccordion = () => {
     100% { opacity: 1; }
     }
   `
-  
-  const ActiveIcon = styled.img`
+
+const ActiveIcon = styled.img`
   height: 18px;
   width: 18px;
   transition: 0.5s;
@@ -118,11 +118,11 @@ export const InfoAccordion = () => {
     transform: scale(1.2) rotate(40deg);
   `}
 `;
-  
-  const Text = styled(TextWhite)`
+
+const Text = styled(TextWhite)`
     margin-top: 15px;
   `
-  
-  const StyledLink = styled(Link)`
+
+const StyledLink = styled(Link)`
     color: white;
   `
